@@ -9,6 +9,9 @@
     <?php
     //This is a PHP program
     #This is Comment
+    /*
+    This is Multi Line comment
+    */
     echo "Hello My World";
     echo "<br>";
     echo "<h1>Learn PHP<h1>"
