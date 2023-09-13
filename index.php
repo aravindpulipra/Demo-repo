@@ -9,7 +9,7 @@
     <?php
     echo "Hello My World";
     echo "<br>";
-    echo  "Learn PHP";
+    echo "<h1>Learn PHP<h1>"
     ?>
 </body>
 </html>
