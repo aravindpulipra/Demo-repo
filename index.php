@@ -7,6 +7,7 @@
 </head>
 <body>
     <?php
+    This is a PHP program
     echo "Hello My World";
     echo "<br>";
     echo "<h1>Learn PHP<h1>"
