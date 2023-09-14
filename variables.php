@@ -12,7 +12,7 @@
     $FlNumber=1.65;
     $php=true;
     $var1=NULL;
-    echo $number;
+    echo $FlNumber;
 
     ?>
     
