@@ -7,7 +7,13 @@
 </head>
 <body>
     <?php
-    
+    $text="Hello World";
+    $number=1000;
+    $FlNumber=1.65;
+    $php=true;
+    $var1=NULL;
+    echo $text;
+
     ?>
     
 </body>
