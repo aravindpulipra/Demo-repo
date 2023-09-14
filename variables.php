@@ -7,10 +7,11 @@
 </head>
 <body>
     <?php
-    $name="Aravind";
-    $age=38;
-    echo var_dump($name);
-    echo var_dump($age);
+    $text="Hello World";
+    echo $text;
+    $text="Learn Php";
+    echo "<br>";
+    echo $text;
 
     ?>
     
