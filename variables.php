@@ -7,11 +7,8 @@
 </head>
 <body>
     <?php
-    $text="Hello World";
-    echo $text;
-    $text="Learn Php";
-    echo "<br>";
-    echo $text;
+    define("PI", 3.14);
+    echo PI;
 
     ?>
     
