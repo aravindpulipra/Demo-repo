@@ -7,12 +7,10 @@
 </head>
 <body>
     <?php
-    $text="Hello World";
-    $number=1000;
-    $FlNumber=1.65;
-    $php=false;
-    $var1=NULL;
-    echo $var1;
+    $name="Aravind";
+    $age=38;
+    echo "My Name is $name";
+    echo "Iam $age years old";
 
     ?>
     
