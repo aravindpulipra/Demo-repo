@@ -10,9 +10,9 @@
     $text="Hello World";
     $number=1000;
     $FlNumber=1.65;
-    $php=true;
+    $php=false;
     $var1=NULL;
-    echo $FlNumber;
+    echo $php;
 
     ?>
     
