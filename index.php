@@ -14,7 +14,13 @@
     */
     echo "Hello My World";
     echo "<br>";
-    echo "<h1>Learn PHP<h1>"
+    echo "<h1>Learn PHP<h1>";
+
+    for($i=0; $i<5; $i++) {
+        ?>
+        Line <?php echo ($i+1)?><br/>
+        <?php
+    }
     ?>
 </body>
 </html>
