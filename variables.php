@@ -9,8 +9,8 @@
     <?php
     $name="Aravind";
     $age=38;
-    echo "My Name is $name<br>";
-    echo "Iam $age years old";
+    echo var_dump($name);
+    echo var_dump($age);
 
     ?>
     
