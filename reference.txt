@@ -1,0 +1,111 @@
+git config --global user.name "Ajay Pulipra"
+git config --global user.email ajaypulipra2mail.com
+
+To the current configuration of git
+git config --list
+
+Create your own project:
+git init
+
+To get the current status of repository
+git status
+
+To add a File to the repository
+git add index.html
+
+To add all file
+git add --all
+
+To add all file in the directory
+git add .
+
+To commit the updates with message.
+git commit -m "Intial setup message"
+
+
+To go from one commit to another commit
+git checkout 'commit id'
+git checkout 1f92f0b433ac5dea5fa065c75cae7b446458e51a
+
+To go to the master commit
+git checkout master
+
+To check the log
+git log
+git log --all
+
+To create branch
+git branch  "branch-name"
+Eg: git branch features
+
+To get the list of branch
+git branch
+git branch --all
+
+Merge a branch to the current branch
+git merge 'branch-name'
+Eg:git merge feature (This will merge feature to the current branch)
+
+To know the current branch
+git branch
+
+compare files
+git diff
+
+
+Go back to the last commit
+git slash
+
+Get an repository from the server
+git remote add github https://github.com/ajaypulipra/git-sample.git (you can call any name instead of github which respresent the server)
+
+To get the current remotes
+git remote
+git remote -v
+
+To push a branch to server
+git push server-alias branch-name
+Eg: git push github main
+
+To clone a repository for the team
+git clone git-url
+Eg: git clone https://github.com/ajaypulipra/git-sample.git
+
+
+When a team member is add for a change
+First he  need to clone the repository
+Next,create a branch of  your own, for the change need to be done.
+Then checkout to the branch of the change
+git clone repository-link
+git branch branch-name-for-the-change
+git checkout branch-name-for-the-change
+
+To get the latest change to the local,use pull (Before that you have to checkout maaster/main)
+git checkout main
+git pull
+To get the  changes of a specific branch, then use
+git pull server-alias master
+Eg:git pull github main
+Eg:git pull origin main
+
+Then merge the master/main with your working branch
+Bfore that, check whether the current branch is your working branch. else checkout to it
+git merge main (which will merge the main to the current branch,which is the working branch(Here it is forloop))
+
+After merging you can push the update-branch to server.
+git push server-alias branch-name-for-the-change
+Eg: git push origin forloop
+
+Once successfully pushed,contributor need to get  into  his account in github.
+Then he need a "New Pull request"
+
+Create a "Pull Qequest" to merge the branch name in the server to the main branch in the server
+
+Then the admin need to "Merge the Pull request", from his account.
+
+It will update the main branch in github.
+
+To get this changes to others,use pull
+git pull
+or
+git pull server-alias branch-name
