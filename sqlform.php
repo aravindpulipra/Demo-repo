@@ -5,7 +5,8 @@ $db = new stdDatabase();
 
 if($_POST) {
    
-
+    $db->newStudent($_POST['name'],$_POST['email'],$_POST['mark']);
+    header('Location: sqlform.php');
 }
 ?>
 <!DOCTYPE html>
@@ -44,10 +45,45 @@ if($_POST) {
     <div class="row">
       <div class="col">
         <br/>
-        <button type="button" class="btn btn-primary btn-xs float-end">Submit</button>
+        <button type="submit" class="btn btn-primary btn-xs float-end">Submit</button>
       </div>
     </div>           
   </form>
+</div>
+
+<div class="container mt-3">
+  <h2>List of Student</h2>
+  <div class="row">
+  <table class="table">
+    <?php
+        $students = $db->getStudents();
+
+        if($students->num_rows>0) {
+            while($row = $students->fetch_assoc()) {
+                ?>
+                
+                    <tr>
+                        <td><?php echo $row['name']?></td>
+                        <td><?php echo $row['email']?></td>
+                        <td><?php echo $row['mark']?></td>
+                        <td><a href="sqlform.php?id=<?php echo $row["id"]?>">Edit</a></td>
+                    </tr>
+                
+                <?php
+            }
+        }
+        else {
+            ?>
+            <table class="table">
+                <tr>
+                    <td>No Students found!</td>
+                </tr>
+            </table>    
+            <?php
+        }
+        ?>
+  </table>
+  </div>
 </div>
 
 </body>

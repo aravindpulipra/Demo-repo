@@ -32,11 +32,20 @@
    public function  __construct() {
 
       $this->conn = mysqli_connect($this->host, $this->username, $this->password, $this->database);
-      if($this->conn) {
-         echo "Succesfully Connected";
-      }else{
-         die("Could not Connect");
-      }
+   }
 
+   public function newStudent($name,$email,$mark) {
+      $sts = mysqli_query($this->conn,"INSERT INTO `contact` (`name`,`email`,`mark`) values ('$name','$email','$mark')");
+
+      if($sts) {
+         echo "Inserted successfuly!";
+      }
+   }
+
+   public function getStudents() { 
+
+      $sql = "SELECT * FROM contact";
+      $result = $this->conn->query($sql);
+      return  $result;
    }
 }
