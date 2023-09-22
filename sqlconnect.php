@@ -37,15 +37,48 @@
    public function newStudent($name,$email,$mark) {
       $sts = mysqli_query($this->conn,"INSERT INTO `contact` (`name`,`email`,`mark`) values ('$name','$email','$mark')");
 
-      if($sts) {
-         echo "Inserted successfuly!";
-      }
+      if($sts)
+         return true;
+      else
+         return false;
    }
 
-   public function getStudents() { 
+   public function editStudent($id,$name,$email,$mark) {
+      $sts = mysqli_query($this->conn,"UPDATE `contact` SET `name`='$name', `email`='$email', `mark`='$mark' WHERE `id`='$id'");
+
+      if($sts)
+         return true;
+      else
+         return false;
+   }   
+
+   public function getAllStudents() { 
 
       $sql = "SELECT * FROM contact";
       $result = $this->conn->query($sql);
       return  $result;
    }
+
+   public function getStudent($id) { 
+
+      $sql = "SELECT name,email,mark FROM contact WHERE id='$id'";
+      $result = $this->conn->query($sql);
+      if($result) {
+         $row = $result->fetch_assoc();
+         return $row;
+      }
+      else
+         return false;
+   } 
+
+   public function deleteStudent($id) { 
+
+      $sql = "DELETE FROM contact WHERE id='$id'";
+      $result = $this->conn->query($sql);
+      if($result) {
+         return true;
+      }
+      else
+         return false;
+   }      
 }
