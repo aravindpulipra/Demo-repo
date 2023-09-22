@@ -109,3 +109,15 @@ To get this changes to others,use pull
 git pull
 or
 git pull server-alias branch-name
+
+Fork: to copy a opensource project to your account,so that you can contribute to  it
+
+.gitignore: to specify the list of files that need to be ignore by the git
+
+Issues: its where tester can report an issue.
+
+Sponsor: Get sponsorship for your projects. You can setup it in the "Settings" tab
+
+Gist: Gist is a part of code which we want share to all
+
+Project Management:
