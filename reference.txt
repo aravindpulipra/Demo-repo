@@ -42,6 +42,10 @@ To get the list of branch
 git branch
 git branch --all
 
+To create a branch and chekout to that branch
+git checkout -b branch-name
+Eg:git checkout -b branch
+
 Merge a branch to the current branch
 git merge 'branch-name'
 Eg:git merge feature (This will merge feature to the current branch)
